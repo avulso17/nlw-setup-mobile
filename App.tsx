@@ -1,5 +1,4 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
 
 import { Loading } from './src/components/Loading';
 
@@ -10,6 +9,9 @@ import {
   Inter_700Bold,
   Inter_800ExtraBold,
   } from '@expo-google-fonts/inter';
+
+import { Home } from './src/screens/Home';
+
 
 export default function App() {
   const [ fontsLoaded ] = useFonts({
@@ -26,24 +28,10 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.Text}>Haruo lindao</Text>
+    <>
       <StatusBar style='light' />
-    </View>
+      <Home />
+    </>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#09090A',
-    color: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  Text: {
-    color: '#fff',
-    fontSize: 30,
-    fontFamily: 'Inter_700Bold',
-  }
-});
